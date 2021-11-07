@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A712B0B22738847400EDA92C /* MemorizeGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712B0B12738847400EDA92C /* MemorizeGameModel.swift */; };
+		A712B0B42738848800EDA92C /* MemorizeGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A712B0B32738848800EDA92C /* MemorizeGameViewModel.swift */; };
 		A7453DB82730B2FC00EF06EF /* MemorizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7453DB72730B2FC00EF06EF /* MemorizeApp.swift */; };
 		A7453DBA2730B2FC00EF06EF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7453DB92730B2FC00EF06EF /* ContentView.swift */; };
 		A7453DBC2730B30200EF06EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7453DBB2730B30200EF06EF /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A712B0B12738847400EDA92C /* MemorizeGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGameModel.swift; sourceTree = "<group>"; };
+		A712B0B32738848800EDA92C /* MemorizeGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGameViewModel.swift; sourceTree = "<group>"; };
 		A7453DB42730B2FC00EF06EF /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7453DB72730B2FC00EF06EF /* MemorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeApp.swift; sourceTree = "<group>"; };
 		A7453DB92730B2FC00EF06EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		A7453DB62730B2FC00EF06EF /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				A712B0B12738847400EDA92C /* MemorizeGameModel.swift */,
+				A712B0B32738848800EDA92C /* MemorizeGameViewModel.swift */,
 				A7453DB72730B2FC00EF06EF /* MemorizeApp.swift */,
 				A7453DB92730B2FC00EF06EF /* ContentView.swift */,
 				A7453DBB2730B30200EF06EF /* Assets.xcassets */,
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A712B0B42738848800EDA92C /* MemorizeGameViewModel.swift in Sources */,
+				A712B0B22738847400EDA92C /* MemorizeGameModel.swift in Sources */,
 				A7453DBA2730B2FC00EF06EF /* ContentView.swift in Sources */,
 				A7453DB82730B2FC00EF06EF /* MemorizeApp.swift in Sources */,
 			);
