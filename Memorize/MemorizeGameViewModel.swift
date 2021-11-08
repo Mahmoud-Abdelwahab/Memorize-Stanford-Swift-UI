@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MemorizeGameViewModel {
+class MemorizeGameViewModel: ObservableObject {
     static let emojes = ["🚒","🚕","🚗","🚙","🚌","🚎","🏎","🚓","🚑","🚐","🛻","🚚","🚛","🚜","🛺","🚨","🚔","🚍","🚘","🚖","✈️","⛴","🚀","🛳","🚞"]
     
     static func createMemoryGameModel()-> MemorizeGameModel<String>{
@@ -16,12 +16,14 @@ class MemorizeGameViewModel {
        }
     }
     
-    private var model = createMemoryGameModel()
-    
+    @Published private var model = createMemoryGameModel()
+
     var cards: Array<MemorizeGameModel<String>.Card>{
         return model.cards
     }
     
-    
+    func choose(card: MemorizeGameModel<String>.Card) {
+        model.choose(card)
+    }
     
 }

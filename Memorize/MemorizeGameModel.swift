@@ -15,19 +15,22 @@ struct MemorizeGameModel<CardContent> {
         // add numberOfPairseOfCards * 2 to cards array
         for index in 0..<numberOfPairseOfCards{
             let content = createCardContent(index)
-            cards.append(Card(cardContent: content))
-            cards.append(Card(cardContent: content))
+            cards.append(Card(cardContent: content, id: index*2))
+            cards.append(Card(cardContent: content, id: index*2+1))
         }
     }
     
-    func choose(_ card: Card){
-        
+   mutating func choose(_ card: Card){
+        let index = cards.firstIndex{ card.id == $0.id}
+        guard let index = index else{return}
+        cards[index].isFaceUp.toggle()
     }
     
-    struct Card {
+    struct Card: Identifiable {
         var isFaceUp    = false
         var isMatched   = false
         var cardContent: CardContent
+        var id: Int
     }
     
 }
