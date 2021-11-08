@@ -57,8 +57,8 @@
 			children = (
 				A712B0B12738847400EDA92C /* MemorizeGameModel.swift */,
 				A712B0B32738848800EDA92C /* MemorizeGameViewModel.swift */,
-				A7453DB72730B2FC00EF06EF /* MemorizeApp.swift */,
 				A7453DB92730B2FC00EF06EF /* ContentView.swift */,
+				A7453DB72730B2FC00EF06EF /* MemorizeApp.swift */,
 				A7453DBB2730B30200EF06EF /* Assets.xcassets */,
 				A7453DBD2730B30200EF06EF /* Preview Content */,
 			);

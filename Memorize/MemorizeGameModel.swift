@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct MemorizeGameModel<CardContent> {
+struct MemorizeGameModel<CardContent> where CardContent: Equatable {
     private(set) var cards: Array<Card>
+    
+    private var indexOfTheOnlyFaceUpCard: Int?
     
     init(numberOfPairseOfCards: Int,createCardContent: (Int)->CardContent){
        cards = Array<Card>()
@@ -21,9 +23,26 @@ struct MemorizeGameModel<CardContent> {
     }
     
    mutating func choose(_ card: Card){
-        let index = cards.firstIndex{ card.id == $0.id}
-        guard let index = index else{return}
-        cards[index].isFaceUp.toggle()
+       
+       if let index = cards.firstIndex(where: { card.id == $0.id}) ,
+       !cards[index].isFaceUp ,
+       !cards[index].isMatched {
+           if let indexOfTheOnlyFaceUpCard = indexOfTheOnlyFaceUpCard {
+               if cards[indexOfTheOnlyFaceUpCard].cardContent == cards[index].cardContent {
+                   cards[indexOfTheOnlyFaceUpCard].isMatched = true
+                   cards[index].isMatched = true
+               }
+               self.indexOfTheOnlyFaceUpCard = nil
+           }else{
+               for index in cards.indices {
+                   cards[index].isFaceUp = false
+               }
+               self.indexOfTheOnlyFaceUpCard = index
+           }
+           cards[index].isFaceUp.toggle()
+       }
+      
+       
     }
     
     struct Card: Identifiable {
