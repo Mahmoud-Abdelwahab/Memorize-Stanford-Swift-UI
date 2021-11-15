@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MemorizeGameView.swift
 //  Memorize
 //
 //  Created by Mahmoud Abdul-Wahab on 02/11/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MemorizeGameView: View {
    @ObservedObject var viewModel: MemorizeGameViewModel
     
     @State var visableCardsNumber = 4
@@ -50,9 +50,9 @@ struct CardView: View{
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = MemorizeGameViewModel()
-        ContentView(viewModel: viewModel)
+        MemorizeGameView(viewModel: viewModel)
             .preferredColorScheme(.light)
-        ContentView(viewModel: viewModel)
+        MemorizeGameView(viewModel: viewModel)
             .preferredColorScheme(.dark)
     }
 }
